@@ -1,0 +1,1815 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     82057,       1807]
+NotebookOptionsPosition[     79541,       1761]
+NotebookOutlinePosition[     80015,       1779]
+CellTagsIndexPosition[     79972,       1776]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.8456117955607567`*^9, 3.8456118106340923`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"103381ce-fd2a-4186-8c50-5a7305d30926"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EnergyProduction", " ", "=", " ", 
+   RowBox[{"Import", "[", "\"\<share-elec-produc-by-source.csv\>\"", "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.845611539401958*^9, 3.8456115954255342`*^9}, {
+  3.845611757578011*^9, 3.845611769333377*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"92936f7c-4c5f-4cf2-8c30-b437c308a90c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Dataset", "@", 
+  RowBox[{"EnergyProduction", "[", 
+   RowBox[{"[", 
+    RowBox[{"1", ";;", "5"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.845611602027322*^9, 3.845611609545019*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"c8c03557-986f-40ac-affb-2eef185c7770"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[
+   DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = 
+    Association[
+    "InitialData" -> {{
+       "Entity", "Code", "Year", "Coal (% electricity)", 
+        "Gas (% electricity)", "Hydro (% electricity)", 
+        "Solar (% electricity)", "Wind (% electricity)", 
+        "Oil (% electricity)", "Nuclear (% electricity)", 
+        "Other renewables (% electricity)"}, {
+       "Afghanistan", "AFG", 2000, 0, 33.19057815845831, 66.80942184154189, 0,
+         0, 0, 0, 0}, {
+       "Afghanistan", "AFG", 2001, 0, 15.87837837837838, 84.12162162162163, 0,
+         0, 0, 0, 0}, {
+       "Afghanistan", "AFG", 2002, 0, 19.213973799126638`, 80.78602620087337, 
+        0, 0, 0, 0, 0}, {
+       "Afghanistan", "AFG", 2003, 0, 32.9073482428115, 67.0926517571885, 0, 
+        0, 0, 0, 0}}, "AllowEmbedding" -> True, "InitialShape" -> 
+     TypeSystem`PackageScope`Limited[
+       TypeSystem`PackageScope`MatrixShape[5, 11], 5, 11, {All}], 
+     "InitialType" -> TypeSystem`Vector[
+       TypeSystem`Vector[TypeSystem`AnyType, 11], 5], "Meta" -> Association[],
+      "RowTarget" -> 20, "ColumnTarget" -> 10, "Shape" -> 
+     TypeSystem`PackageScope`Limited[
+       TypeSystem`PackageScope`MatrixShape[5, 11], 5, 11, {All}], "Type" -> 
+     TypeSystem`Vector[
+       TypeSystem`Vector[TypeSystem`AnyType, 11], 5], "Path" -> {}, 
+     "DisplayedRowCount" -> 5, "DisplayedColumnCount" -> 11, "DataRowCount" -> 
+     5, "DataColumnCount" -> 11, "SortPaths" -> {}, "SortDirections" -> {}, 
+     "HiddenItemsMap" -> Null, "UpdateType" -> 1], 
+    TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
+    TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$hPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+    DynamicModule[{
+     TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+        Style[
+         Grid[{{
+            Item[
+             Pane[
+              Annotation["Entity", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 1}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{67.2, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Code", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 2}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Year", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 3}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Coal (% electricity)", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 4}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{224.00000000000003`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Gas (% electricity)", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 5}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Hydro (% electricity)", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 6}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{235.20000000000002`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Solar (% electricity)", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 7}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{235.20000000000002`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Wind (% electricity)", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 8}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{224.00000000000003`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Oil (% electricity)", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 9}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Nuclear (% electricity)", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 10}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{257.6, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Other renewables (% electricity)", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 11}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{358.40000000000003`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Afghanistan", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 1}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{123.20000000000002`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["AFG", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 2}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{33.6, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["2000"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 3}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 4}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["33.1906"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 5}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["66.8094"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 6}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 7}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 8}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 9}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 10}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 11}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Afghanistan", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 1}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{123.20000000000002`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["AFG", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 2}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{33.6, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["2001"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 3}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 4}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["15.8784"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 5}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["84.1216"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 6}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 7}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 8}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 9}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 10}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 11}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Afghanistan", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 1}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{123.20000000000002`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["AFG", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 2}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{33.6, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["2002"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 3}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 4}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["19.214"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 5}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["80.786"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 6}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 7}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 8}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 9}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 10}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 11}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Afghanistan", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 1}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{123.20000000000002`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["AFG", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 2}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{33.6, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["2003"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 3}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 4}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["32.9073"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 5}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["67.0927"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 6}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 7}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 8}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 9}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 10}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 11}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}}, 
+          BaseStyle -> {
+           ContextMenu -> 
+            Dynamic[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+              Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$], {}, 
+                TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu, True, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger = 
+                 TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu = 
+                 Block[{TypeSystem`NestedGrid`PackagePrivate`$globalScrollPos = \
+{TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$}}, 
+                   
+                   With[{TypeSystem`NestedGrid`PackagePrivate`lastPath$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    Alternatives["RowHeader", "ColumnHeader"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]], 
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`allHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`columnSortDirection[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortPaths"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortDirections"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`haveData$ = Not[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`datasetInitialData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$ = Not[
+                    FreeQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, Keys]]}, 
+                    Join[{
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
+                    Nothing, 
+                    MenuItem[
+                    StringJoin["Show ", 
+                    Which[
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""]], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "remove"]], MenuEvaluator -> Automatic]], 
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`pathEmptyQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$, 
+                    And[
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
+                    Nothing, 
+                    MenuItem[
+                    StringJoin["Hide ", 
+                    Which[
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""]], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, "add"]], 
+                    MenuEvaluator -> Automatic]], Delimiter}, 
+                    If[
+                    And[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`lastPathType$, 
+                    Alternatives["ColumnHeader", "KeyDummy"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`allHidden$]], {
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Ascending", 
+                    MenuItem["Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Ascending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Descending", 
+                    MenuItem["Reverse Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Descending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    None, 
+                    MenuItem["Unsort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, None]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter}, {}], {
+                    MenuItem["Copy Position to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Copy Data to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter, 
+                    MenuItem["Paste Position in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Paste Data in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], Nothing]}]]]]], FontFamily -> 
+            "Source Sans Pro", FontSize -> 14, FontWeight -> Plain}, Dividers -> 
+          All, FrameStyle -> GrayLevel[0.7490196078431373], 
+          Spacings -> {0, 0}, Alignment -> Left, 
+          BaseStyle -> {
+           FontFamily -> "Source Sans Pro", FontSize -> 14, FontWeight -> 
+            Plain}], LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> 
+         False, ShowAutoStyles -> False]], 
+      TypeSystem`NestedGrid`PackagePrivate`initialQ = True}, 
+     Dynamic[
+      TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+         Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+         Module[{
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+           TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+           TypeSystem`NestedGrid`PackagePrivate`datasetData[
+            TypeSystem`NestedGrid`PackagePrivate`$state$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = If[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpData$], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+             TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+             TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+              TypeSystem`NestedGrid`PackagePrivate`localHold[
+              TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+             TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+            Not[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+            TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+            TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+       TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$; 
+       TypeSystem`NestedGrid`PackagePrivate`$hPos$$; If[
+         FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+         TypeSystem`SparseGrid[
+          TypeSystem`H["(data no longer present)"]], 
+         TypeSystem`NestedGrid`PackagePrivate`renderedGrid]], 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$}], 
+     DynamicModuleValues :> {}], 
+    TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+     TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+      TypeSystem`PackageScope`SubViewPathbar[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+       TypeSystem`NestedGrid`PackagePrivate`updateState[
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+        TypeSystem`NestedGrid`PackagePrivate`localHold[
+        TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]]], 
+     TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Style[
+     Framed[
+      Dynamic[
+       Replace[
+       TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$, {
+        TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][Null, 
+           Blank[]] -> "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`path$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`pathType$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+            Blank[]]] :> (
+          Increment[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger]; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+           TypeSystem`NestedGrid`PackagePrivate`path$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathType = 
+           TypeSystem`NestedGrid`PackagePrivate`pathType$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathIsLeafHeader = 
+           TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastOutputID = 
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+            TypeSystem`NestedGrid`PackagePrivate`$outputID$$]; 
+          TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+           TypeSystem`NestedGrid`PackagePrivate`path$, 
+            TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+         Spacer[10], Blank[] :> Spacer[10]}], 
+       TrackedSymbols :> {
+        TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$}], FrameStyle -> 
+      None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> Top, 
+      ImageSize -> {Automatic, 15}], FontSize -> 1], 
+    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = Null}, 
+    DynamicWrapperBox[
+     DynamicBox[ToBoxes[
+       Dataset`DatasetContent[
+       2, "Path" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$path$$], 
+        "Grid" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$grid$$], "State" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$state$$], "VPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$vPos$$], "HPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$hPos$$], "TopBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$topBar$$], "BottomBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$], "OutputID" -> 
+        Hold[
+          TypeSystem`NestedGrid`PackagePrivate`localHold[
+          TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]], StandardForm],
+      ImageSizeCache->{1546., {92.91754150390625, 100.08245849609375`}},
+      TrackedSymbols:>{
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
+     TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = 
+     MouseAnnotation[],
+     ImageSizeCache->{1546., {92.91754150390625, 100.08245849609375`}}],
+    BaseStyle->{LineBreakWithin -> False},
+    DynamicModuleValues:>{},
+    Initialization:>(TypeSystem`NestedGrid`PackagePrivate`$outputID$$ = 
+     CreateUUID[]),
+    UnsavedVariables:>{TypeSystem`NestedGrid`PackagePrivate`$outputID$$}],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  Dataset`InterpretDataset[1],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.8456116107998667`*^9, 3.8456118149034977`*^9, 
+  3.8456799718665648`*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"1491c2c1-a749-426e-a386-f7a4a5ac846f"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Positions", "[", "countryName_", "]"}], " ", ":=", " ", 
+  RowBox[{"Position", "[", 
+   RowBox[{
+    RowBox[{"Dataset", "@", 
+     RowBox[{"EnergyProduction", "[", 
+      RowBox[{"[", 
+       RowBox[{";;", ",", "1"}], "]"}], "]"}]}], ",", "countryName"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.845611690750484*^9, 3.845611696428164*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"98bee066-e717-4d7c-8bd4-1ecb21b6e9d8"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ProductionOF", "[", "countryName_", "]"}], " ", ":=", " ", 
+  RowBox[{"EnergyProduction", "[", 
+   RowBox[{"[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Positions", "[", "countryName", "]"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "[", 
+      RowBox[{"[", "1", "]"}], "]"}], ";;", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"Last", "@", 
+        RowBox[{"Positions", "[", "countryName", "]"}]}], ")"}], "[", 
+      RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ProductionYear", "[", "year_", "]"}], ":=", " ", 
+   RowBox[{"Select", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"EnergyProduction", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", " ", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"Position", "[", 
+              RowBox[{
+               RowBox[{"Dataset", "@", 
+                RowBox[{"EnergyProduction", "[", 
+                 RowBox[{"[", 
+                  RowBox[{";;", ",", "3"}], "]"}], "]"}]}], ",", "year"}], 
+              "]"}], "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", 
+            RowBox[{"[", "1", "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "1", ",", 
+             RowBox[{"Length", "@", 
+              RowBox[{"Position", "[", 
+               RowBox[{
+                RowBox[{"Dataset", "@", 
+                 RowBox[{"EnergyProduction", "[", 
+                  RowBox[{"[", 
+                   RowBox[{";;", ",", "3"}], "]"}], "]"}]}], ",", "year"}], 
+               "]"}]}]}], "}"}]}], "]"}]}], "}"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "2", "]"}], "]"}], "!=", "\"\<\>\""}], "&"}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SpecificProductionOF", "[", 
+   RowBox[{"countryName_", ",", " ", "year_"}], "]"}], " ", ":=", " ", 
+  RowBox[{
+   RowBox[{"ProductionOF", "[", "countryName", "]"}], "[", 
+   RowBox[{"[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Position", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"ProductionOF", "[", "countryName", "]"}], "[", 
+          RowBox[{"[", 
+           RowBox[{";;", ",", "3"}], "]"}], "]"}], ",", "year"}], "]"}], "[", 
+       
+       RowBox[{"[", "1", "]"}], "]"}], "[", 
+      RowBox[{"[", "1", "]"}], "]"}], ",", " ", "All"}], "]"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.845614153285089*^9, 3.845614154451152*^9}, {
+   3.8456144993596077`*^9, 3.8456144998698883`*^9}, {3.845624914572237*^9, 
+   3.845625013797011*^9}, {3.845625067683571*^9, 3.8456250799327803`*^9}, 
+   3.845625156771118*^9, {3.845625662481626*^9, 3.845625702930911*^9}, {
+   3.845685206467353*^9, 3.845685238809062*^9}, 3.845685285715098*^9},
+ CellLabel->"In[11]:=",ExpressionUUID->"ca294f41-762a-4336-a496-8db422a8ba29"],
+
+Cell[TextData[StyleBox["-- Visualization 1 : Show the energy sources in \
+time-series from country input --",
+ FontSize->18,
+ FontWeight->"Bold",
+ FontColor->GrayLevel[1],
+ Background->RGBColor[0., 0.442572671091783, 0.29530785076676586`]]], "Text",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellFrameColor->GrayLevel[0.75],
+ CellChangeTimes->{{3.845611879318666*^9, 3.845611883867496*^9}, {
+   3.845613628841028*^9, 3.845613641298841*^9}, {3.8456140000975437`*^9, 
+   3.845614014785619*^9}, {3.845614051364455*^9, 3.8456140685649757`*^9}, 
+   3.845614151204928*^9},ExpressionUUID->"c09f94bf-6ca2-4815-96fd-\
+88a7b6ddf223"],
+
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"country", " ", "=", " ", "\"\<Thailand\>\""}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Grid", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"InputField", "@", 
+        RowBox[{"Dynamic", "[", "country", "]"}]}], "}"}], ",", " ", 
+      "\[IndentingNewLine]", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"ListLinePlot", "[", 
+          RowBox[{
+           RowBox[{"Transpose", "@", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "3"}], "]"}], "]"}], ",", " ", 
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "6"}], "]"}], "]"}]}], "}"}]}], ",", 
+           " ", 
+           RowBox[{"PlotLabel", "\[Rule]", "\"\<Hydro (% electricity)\>\""}], 
+           ",", " ", 
+           RowBox[{"PlotStyle", "\[Rule]", "Green"}]}], "]"}]}], " ", ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"ListLinePlot", "[", 
+          RowBox[{
+           RowBox[{"Transpose", "@", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "3"}], "]"}], "]"}], ",", " ", 
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "7"}], "]"}], "]"}]}], "}"}]}], ",", 
+           " ", 
+           RowBox[{"PlotLabel", "\[Rule]", "\"\<Solar (% electricity)\>\""}], 
+           ",", " ", 
+           RowBox[{"PlotStyle", "\[Rule]", "Green"}]}], "]"}]}], " ", ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"ListLinePlot", "[", 
+          RowBox[{
+           RowBox[{"Transpose", "@", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "3"}], "]"}], "]"}], ",", " ", 
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "8"}], "]"}], "]"}]}], "}"}]}], ",", 
+           " ", 
+           RowBox[{"PlotLabel", "\[Rule]", "\"\<Wind (% electricity)\>\""}], 
+           ",", " ", 
+           RowBox[{"PlotStyle", "\[Rule]", "Green"}]}], "]"}]}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"ListLinePlot", "[", 
+          RowBox[{
+           RowBox[{"Transpose", "@", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "3"}], "]"}], "]"}], ",", " ", 
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "11"}], "]"}], "]"}]}], "}"}]}], ",",
+            " ", 
+           RowBox[{
+           "PlotLabel", "\[Rule]", 
+            "\"\<Other Renewables (% electricity)\>\""}], ",", " ", 
+           RowBox[{"PlotStyle", "\[Rule]", "Green"}]}], "]"}]}]}], " ", 
+       "\[IndentingNewLine]", "}"}], ",", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"ListLinePlot", "[", 
+          RowBox[{
+           RowBox[{"Transpose", "@", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "3"}], "]"}], "]"}], ",", " ", 
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "4"}], "]"}], "]"}]}], "}"}]}], ",", 
+           " ", 
+           RowBox[{"PlotLabel", "\[Rule]", "\"\<Coal (% electricity)\>\""}]}],
+           "]"}]}], " ", ",", "\[IndentingNewLine]", 
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"ListLinePlot", "[", 
+          RowBox[{
+           RowBox[{"Transpose", "@", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "3"}], "]"}], "]"}], ",", " ", 
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "5"}], "]"}], "]"}]}], "}"}]}], ",", 
+           " ", 
+           RowBox[{"PlotLabel", "\[Rule]", "\"\<Gas (% electricity)\>\""}]}], 
+          "]"}]}], " ", ",", "\[IndentingNewLine]", 
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"ListLinePlot", "[", 
+          RowBox[{
+           RowBox[{"Transpose", "@", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "3"}], "]"}], "]"}], ",", " ", 
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "9"}], "]"}], "]"}]}], "}"}]}], ",", 
+           " ", 
+           RowBox[{"PlotLabel", "\[Rule]", "\"\<Oil (% electricity)\>\""}]}], 
+          "]"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"ListLinePlot", "[", 
+          RowBox[{
+           RowBox[{"Transpose", "@", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "3"}], "]"}], "]"}], ",", " ", 
+              RowBox[{
+               RowBox[{"ProductionOF", "[", "country", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "10"}], "]"}], "]"}]}], "}"}]}], ",",
+            " ", 
+           RowBox[{
+           "PlotLabel", "\[Rule]", "\"\<Nuclear (% electricity)\>\""}], ",", 
+           " ", 
+           RowBox[{"PlotStyle", "\[Rule]", "Red"}]}], "]"}]}]}], " ", 
+       "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", "}"}], "]"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.8456134189863997`*^9, 3.845613549703669*^9}, {
+  3.845613773000008*^9, 3.8456139225440817`*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"929c3a3f-f886-4df2-a4be-bd44fa7d4d8d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`country$$ = "United States"}, 
+  TagBox[GridBox[{
+     {
+      InputFieldBox[Dynamic[$CellContext`country$$]], "", "", ""},
+     {
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 6]}], 
+         PlotLabel -> "Hydro (% electricity)", PlotStyle -> Green], 
+        StandardForm],
+       ImageSizeCache->{225., {76., 82.}}], 
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 7]}], 
+         PlotLabel -> "Solar (% electricity)", PlotStyle -> Green], 
+        StandardForm],
+       ImageSizeCache->{225., {77., 83.}}], 
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 8]}], 
+         PlotLabel -> "Wind (% electricity)", PlotStyle -> Green], 
+        StandardForm],
+       ImageSizeCache->{225., {80., 86.}}], 
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 11]}], 
+         PlotLabel -> "Other Renewables (% electricity)", PlotStyle -> Green],
+         StandardForm],
+       ImageSizeCache->{225., {77., 83.}}]},
+     {
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 4]}], 
+         PlotLabel -> "Coal (% electricity)"], StandardForm],
+       ImageSizeCache->{225., {78., 84.}}], 
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 5]}], 
+         PlotLabel -> "Gas (% electricity)"], StandardForm],
+       ImageSizeCache->{225., {78., 84.}}], 
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 9]}], 
+         PlotLabel -> "Oil (% electricity)"], StandardForm],
+       ImageSizeCache->{225., {80., 86.}}], 
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 10]}], 
+         PlotLabel -> "Nuclear (% electricity)", PlotStyle -> Red], 
+        StandardForm],
+       ImageSizeCache->{225., {73., 79.}}]}
+    },
+    AutoDelete->False,
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"],
+  DynamicModuleValues:>{}]], "Input",
+ CellChangeTimes->{3.84561394292305*^9},
+ CellLabel->"In[24]:=",ExpressionUUID->"bf7a6c7c-8003-477b-a05b-14bc9b5002f8"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`country$$ = "United States"}, 
+  TagBox[GridBox[{
+     {
+      InputFieldBox[Dynamic[$CellContext`country$$]], "", "", ""},
+     {
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 6]}], 
+         PlotLabel -> "Hydro (% electricity)", PlotStyle -> Green], 
+        StandardForm],
+       ImageSizeCache->{225., {76., 82.}}], 
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 7]}], 
+         PlotLabel -> "Solar (% electricity)", PlotStyle -> Green], 
+        StandardForm],
+       ImageSizeCache->{225., {77., 83.}}], 
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 8]}], 
+         PlotLabel -> "Wind (% electricity)", PlotStyle -> Green], 
+        StandardForm],
+       ImageSizeCache->{225., {80., 86.}}], 
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 11]}], 
+         PlotLabel -> "Other Renewables (% electricity)", PlotStyle -> Green],
+         StandardForm],
+       ImageSizeCache->{225., {77., 83.}}]},
+     {
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 4]}], 
+         PlotLabel -> "Coal (% electricity)"], StandardForm],
+       ImageSizeCache->{225., {78., 84.}}], 
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 5]}], 
+         PlotLabel -> "Gas (% electricity)"], StandardForm],
+       ImageSizeCache->{225., {78., 84.}}], 
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 9]}], 
+         PlotLabel -> "Oil (% electricity)"], StandardForm],
+       ImageSizeCache->{225., {80., 86.}}], 
+      DynamicBox[ToBoxes[
+        ListLinePlot[
+         Transpose[{
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 3], 
+           Part[
+            $CellContext`ProductionOF[$CellContext`country$$], All, 10]}], 
+         PlotLabel -> "Nuclear (% electricity)", PlotStyle -> Red], 
+        StandardForm],
+       ImageSizeCache->{225., {73., 79.}}]}
+    },
+    AutoDelete->False,
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{3.845613943378602*^9},
+ CellLabel->"Out[24]=",ExpressionUUID->"b3b0139d-e20a-4dca-ba87-e1c464312ba8"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.845614360139629*^9, 
+  3.845614364714778*^9}},ExpressionUUID->"fcfd3862-d6cb-4da2-970d-\
+15157d9dd6db"],
+
+Cell[TextData[{
+ StyleBox["-- Visualization 2 : Show the energy sources proportion in ",
+  FontSize->18,
+  FontWeight->"Bold",
+  FontColor->GrayLevel[1],
+  Background->RGBColor[0., 0.442572671091783, 0.29530785076676586`]],
+ StyleBox["particular year and country",
+  FontSize->18,
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->GrayLevel[1],
+  Background->RGBColor[0., 0.442572671091783, 0.29530785076676586`]],
+ StyleBox[" --",
+  FontSize->18,
+  FontWeight->"Bold",
+  FontColor->GrayLevel[1],
+  Background->RGBColor[0., 0.442572671091783, 0.29530785076676586`]]
+}], "Text",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellFrameColor->GrayLevel[0.75],
+ CellChangeTimes->{{3.8456143225385237`*^9, 
+  3.845614338086588*^9}},ExpressionUUID->"a7bc84fa-04a3-4ae6-bc27-\
+f79e81c5670f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SpecificProductionOF", "[", 
+  RowBox[{"\"\<Thailand\>\"", ",", " ", "2019"}], "]"}]], "Input",
+ CellChangeTimes->{{3.845614473224606*^9, 3.845614522440349*^9}, {
+  3.845615264576399*^9, 3.845615283702932*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"37cc229b-9b4b-4036-a0df-6bafb030f87e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Thailand\"\>", ",", "\<\"THA\"\>", ",", "2019", ",", 
+   "18.347742170585136`", ",", "62.579475344655854`", ",", 
+   "3.470523406970369`", ",", "2.8234242165077026`", ",", 
+   "1.9914348728937963`", ",", "0.6062913605096013`", ",", "0", ",", 
+   "10.181108627877833`"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.845614522899252*^9, {3.8456152801473713`*^9, 3.845615284089531*^9}},
+ CellLabel->"Out[36]=",ExpressionUUID->"03697bfd-24e2-45a6-ad3e-95ceb1b04b1b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"country", " ", "=", " ", "\"\<Thailand\>\""}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Column", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"InputField", "@", 
+       RowBox[{"Dynamic", "[", "country", "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"PieChart", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"SpecificProductionOF", "[", 
+            RowBox[{"country", ",", " ", 
+             RowBox[{"IntegerPart", "@", "year"}]}], "]"}], "[", 
+           RowBox[{"[", 
+            RowBox[{"4", ";;"}], "]"}], "]"}], ",", " ", 
+          RowBox[{"ChartLabels", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<Coal\>\"", ",", " ", "\"\<Gas\>\"", ",", " ", 
+             "\"\<Hydro\>\"", ",", " ", "\"\<Solar\>\"", ",", " ", 
+             "\"\<Wind\>\"", ",", " ", "\"\<Oil\>\"", ",", " ", 
+             "\"\<Nuclear\>\"", ",", " ", "\"\<Other Renewables\>\""}], 
+            "}"}]}], ",", " ", 
+          RowBox[{"ChartStyle", "\[Rule]", "\"\<DarkRainbow\>\""}]}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"year", ",", "2000", ",", "2020"}], "}"}]}], "]"}]}], 
+     "\[IndentingNewLine]", "}"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8456145287922077`*^9, 3.845614625120545*^9}, {
+  3.845614657525878*^9, 3.845614670816429*^9}, {3.845614708314907*^9, 
+  3.845614709892749*^9}, {3.845614742411645*^9, 3.845614974260457*^9}, {
+  3.845615274918429*^9, 3.845615287435092*^9}, {3.84561533211172*^9, 
+  3.845615336046687*^9}, {3.845615427952387*^9, 3.845615444942704*^9}, {
+  3.8456154754706917`*^9, 3.845615494335918*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"0589ebde-21a0-46bd-b7c3-a9aae29e52cf"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`country$$ = "Thailand"}, 
+  TagBox[GridBox[{
+     {
+      InputFieldBox[Dynamic[$CellContext`country$$]]},
+     {
+      TagBox[
+       StyleBox[
+        DynamicModuleBox[{$CellContext`year$$ = 2000., Typeset`show$$ = True, 
+         Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+         Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+         "\"untitled\"", Typeset`specs$$ = {{
+           Hold[$CellContext`year$$], 2000, 2020}}, Typeset`size$$ = {
+         450., {222., 228.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+         Typeset`skipInitDone$$ = True}, 
+         DynamicBox[Manipulate`ManipulateBoxes[
+          1, StandardForm, "Variables" :> {$CellContext`year$$ = 2000}, 
+           "ControllerVariables" :> {}, 
+           "OtherVariables" :> {
+            Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+             Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+             Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+             Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> PieChart[
+             Part[
+              $CellContext`SpecificProductionOF[$CellContext`country$$, 
+               IntegerPart[$CellContext`year$$]], 
+              Span[4, All]], 
+             ChartLabels -> {
+              "Coal", "Gas", "Hydro", "Solar", "Wind", "Oil", "Nuclear", 
+               "Other Renewables"}, ChartStyle -> "DarkRainbow"], 
+           "Specifications" :> {{$CellContext`year$$, 2000, 2020}}, 
+           "Options" :> {}, "DefaultOptions" :> {}],
+          ImageSizeCache->{505., {275., 282.}},
+          SingleEvaluation->True],
+         Deinitialization:>None,
+         DynamicModuleValues:>{},
+         SynchronousInitialization->True,
+         UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+         UnsavedVariables:>{Typeset`initDone$$},
+         UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+        Deployed->True,
+        StripOnInput->False],
+       Manipulate`InterpretManipulate[1]]}
+    },
+    DefaultBaseStyle->"Column",
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Column"],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{3.845679990347177*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"ac94017b-6e0b-4f94-a497-2d3b0604b3d8"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["-- Visualization 3 : Energy Production in same \
+Time-series graph from country input --",
+ FontSize->18,
+ FontWeight->"Bold",
+ FontColor->GrayLevel[1],
+ Background->RGBColor[0., 0.442572671091783, 0.29530785076676586`]]], "Text",
+ CellChangeTimes->{{3.845615580694985*^9, 
+  3.845615630075795*^9}},ExpressionUUID->"496dffc6-8a28-4c89-9a32-\
+f897d58a96a4"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ProductionOFS2000", "[", "country_", "]"}], " ", ":=", " ", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"ProductionOF", "[", "country", "]"}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"#", "[", 
+       RowBox[{"[", "3", "]"}], "]"}], " ", ">", "1999"}], "&"}]}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[14]:=",ExpressionUUID->"bd7f2fd9-9e86-4b46-8092-16f611220af3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ProductionTrend", "[", 
+   RowBox[{"country_", ",", " ", "source_"}], "]"}], ":=", " ", 
+  RowBox[{"Switch", "[", 
+   RowBox[{"source", ",", "\"\<Fossil\>\"", ",", " ", "\[IndentingNewLine]", 
+    RowBox[{"Transpose", "@", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"ProductionOFS2000", "[", "country", "]"}], "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", " ", "3"}], "]"}], "]"}], ",", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"ProductionOFS2000", "[", "country", "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", " ", "4"}], "]"}], "]"}], " ", "+", " ", 
+        RowBox[{
+         RowBox[{"ProductionOFS2000", "[", "country", "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", " ", "5"}], "]"}], "]"}], " ", "+", " ", 
+        RowBox[{
+         RowBox[{"ProductionOFS2000", "[", "country", "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", " ", "9"}], "]"}], "]"}]}]}], "}"}]}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", "\"\<Renewable\>\"", ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Transpose", "@", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"ProductionOFS2000", "[", "country", "]"}], "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", " ", "3"}], "]"}], "]"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"ProductionOFS2000", "[", "country", "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", " ", "6"}], "]"}], "]"}], " ", "+", " ", 
+        RowBox[{
+         RowBox[{"ProductionOFS2000", "[", "country", "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", " ", "7"}], "]"}], "]"}], " ", "+", " ", 
+        RowBox[{
+         RowBox[{"ProductionOFS2000", "[", "country", "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", " ", "8"}], "]"}], "]"}], " ", "+", 
+        RowBox[{
+         RowBox[{"ProductionOFS2000", "[", "country", "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", " ", "11"}], "]"}], "]"}]}]}], "}"}]}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", "\"\<Nuclear\>\"", ",", " ", 
+    RowBox[{"Transpose", "@", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"ProductionOFS2000", "[", "country", "]"}], "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", " ", "3"}], "]"}], "]"}], ",", " ", 
+       RowBox[{
+        RowBox[{"ProductionOFS2000", "[", "country", "]"}], "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", " ", "10"}], "]"}], "]"}]}], "}"}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.845618592437221*^9, 3.845618627979726*^9}, {
+  3.845680010235104*^9, 3.845680011223702*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"d2d4d5b1-82f6-4ad0-b991-31de6306ad3c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"country", " ", "=", " ", "\"\<Thailand\>\""}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Column", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"InputField", "@", 
+       RowBox[{"Dynamic", "[", "country", "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Dynamic", "@", 
+       RowBox[{"ListLinePlot", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"ProductionTrend", "[", 
+            RowBox[{"country", ",", " ", "\"\<Renewable\>\""}], "]"}], ",", 
+           " ", 
+           RowBox[{"ProductionTrend", "[", 
+            RowBox[{"country", ",", " ", "\"\<Fossil\>\""}], "]"}], ",", 
+           RowBox[{"ProductionTrend", "[", 
+            RowBox[{"country", ",", " ", "\"\<Nuclear\>\""}], "]"}]}], "}"}], 
+         ",", "\[IndentingNewLine]", 
+         RowBox[{"PlotLegends", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<Renewable\>\"", ",", " ", "\"\<Fossil fuel\>\"", ",", " ", 
+            "\"\<Nuclear\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+         "PlotLabel", "\[Rule]", 
+          "\"\<energy production (% electricity)\>\""}], ",", " ", 
+         "\[IndentingNewLine]", 
+         RowBox[{"PlotStyle", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"Green", ",", "Blue", ",", " ", "Red"}], "}"}]}]}], 
+        "\[IndentingNewLine]", "]"}]}]}], "\[IndentingNewLine]", "}"}], 
+    "]"}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.845618412774819*^9, 3.845618431843536*^9}, {
+  3.845618501684979*^9, 3.8456185153132753`*^9}, {3.84561868238859*^9, 
+  3.845618704562252*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"8c2c6ebf-88e2-407e-bc31-c4801264c96d"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`country$$ = "Thailand"}, 
+  TagBox[GridBox[{
+     {
+      InputFieldBox[Dynamic[$CellContext`country$$]]},
+     {
+      DynamicBox[ToBoxes[
+        ListLinePlot[{
+          $CellContext`ProductionTrend[$CellContext`country$$, "Renewable"], 
+          $CellContext`ProductionTrend[$CellContext`country$$, "Fossil"], 
+          $CellContext`ProductionTrend[$CellContext`country$$, "Nuclear"]}, 
+         PlotLegends -> {"Renewable", "Fossil fuel", "Nuclear"}, PlotLabel -> 
+         "energy production (% electricity)", 
+         PlotStyle -> {Green, Blue, Red}], StandardForm],
+       ImageSizeCache->{593., {150., 157.}}]}
+    },
+    DefaultBaseStyle->"Column",
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Column"],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{3.8456800141326447`*^9},
+ CellLabel->"Out[14]=",ExpressionUUID->"e3974ffb-0516-438a-ae30-f533494b0ba8"]
+}, Open  ]]
+},
+WindowSize->{1298, 774},
+WindowMargins->{{50, Automatic}, {Automatic, 0}},
+TaggingRules->Association["TryRealOnly" -> False],
+Magnification:>1.25 Inherited,
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (July 9, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6e39bd26-8b8d-4b30-9a67-d87d91be793e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 271, 5, 37, "Input",ExpressionUUID->"103381ce-fd2a-4186-8c50-5a7305d30926"],
+Cell[832, 27, 362, 7, 37, "Input",ExpressionUUID->"92936f7c-4c5f-4cf2-8c30-b437c308a90c"],
+Cell[CellGroupData[{
+Cell[1219, 38, 292, 6, 37, "Input",ExpressionUUID->"c8c03557-986f-40ac-affb-2eef185c7770"],
+Cell[1514, 46, 47301, 937, 217, "Output",ExpressionUUID->"1491c2c1-a749-426e-a386-f7a4a5ac846f"]
+}, Open  ]],
+Cell[48830, 986, 457, 11, 37, "Input",ExpressionUUID->"98bee066-e717-4d7c-8bd4-1ecb21b6e9d8"],
+Cell[49290, 999, 3083, 80, 246, "Input",ExpressionUUID->"ca294f41-762a-4336-a496-8db422a8ba29"],
+Cell[52376, 1081, 614, 12, 60, "Text",ExpressionUUID->"c09f94bf-6ca2-4815-96fd-88a7b6ddf223"],
+Cell[52993, 1095, 6975, 168, 636, "Input",ExpressionUUID->"929c3a3f-f886-4df2-a4be-bd44fa7d4d8d"],
+Cell[CellGroupData[{
+Cell[59993, 1267, 3483, 90, 394, "Input",ExpressionUUID->"bf7a6c7c-8003-477b-a05b-14bc9b5002f8"],
+Cell[63479, 1359, 3485, 90, 399, "Output",ExpressionUUID->"b3b0139d-e20a-4dca-ba87-e1c464312ba8"]
+}, Open  ]],
+Cell[66979, 1452, 152, 3, 37, "Input",ExpressionUUID->"fcfd3862-d6cb-4da2-970d-15157d9dd6db"],
+Cell[67134, 1457, 779, 22, 60, "Text",ExpressionUUID->"a7bc84fa-04a3-4ae6-bc27-f79e81c5670f"],
+Cell[CellGroupData[{
+Cell[67938, 1483, 313, 5, 37, "Input",ExpressionUUID->"37cc229b-9b4b-4036-a0df-6bafb030f87e"],
+Cell[68254, 1490, 504, 9, 42, "Output",ExpressionUUID->"03697bfd-24e2-45a6-ad3e-95ceb1b04b1b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68795, 1504, 1855, 40, 194, "Input",ExpressionUUID->"0589ebde-21a0-46bd-b7c3-a9aae29e52cf"],
+Cell[70653, 1546, 2403, 50, 617, "Output",ExpressionUUID->"ac94017b-6e0b-4f94-a497-2d3b0604b3d8"]
+}, Open  ]],
+Cell[73071, 1599, 380, 8, 49, "Text",ExpressionUUID->"496dffc6-8a28-4c89-9a32-f897d58a96a4"],
+Cell[73454, 1609, 412, 11, 37, "Input",ExpressionUUID->"bd7f2fd9-9e86-4b46-8092-16f611220af3"],
+Cell[73869, 1622, 2812, 67, 298, "Input",ExpressionUUID->"d2d4d5b1-82f6-4ad0-b991-31de6306ad3c"],
+Cell[CellGroupData[{
+Cell[76706, 1693, 1809, 41, 272, "Input",ExpressionUUID->"8c2c6ebf-88e2-407e-bc31-c4801264c96d"],
+Cell[78518, 1736, 1007, 22, 367, "Output",ExpressionUUID->"e3974ffb-0516-438a-ae30-f533494b0ba8"]
+}, Open  ]]
+}
+]
+*)
+
